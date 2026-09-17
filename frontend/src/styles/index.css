@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Swiss Spa Minimalist Design System */
+:root {
+  --color-primary: #0F172A;
+  --color-accent: #10B981;
+  --color-bg: #FAFAFA;
+  --color-card: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg);
+  color: #1E293B;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar - minimal */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4D4D4;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A3A3A3;
+}
+
+/* Glassmorphism HUD */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Teleprompter card effects */
+.teleprompter-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.teleprompter-card.inactive {
+  opacity: 0.3;
+  filter: blur(2px);
+  transform: scale(0.85);
+}
+
+.teleprompter-card.active {
+  opacity: 1;
+  filter: none;
+  transform: scale(1.02);
+  border-left: 3px solid var(--color-accent);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* Video player custom controls */
+.video-timeline {
+  position: relative;
+  height: 48px;
+  background: #F5F5F5;
+  border: 1px solid #E5E5E5;
+  border-radius: 8px;
+  overflow: visible;
+  transition: all 0.2s;
+}
+
+.video-timeline:hover {
+  background: #EBEBEB;
+  border-color: #D4D4D4;
+}
+
+.video-timeline-marker {
+  position: absolute;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  cursor: pointer;
+  transition: transform 0.2s;
+  z-index: 10;
+}
+
+.video-timeline-marker:hover {
+  transform: scaleX(1.5);
+}
+
+.video-timeline-marker.issue {
+  background: #EF4444;
+}
+
+.video-timeline-marker.highlight {
+  background: #10B981;
+}
+
+/* Radar chart */
+.radar-chart {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 rounded-2xl font-medium transition-all duration-200;
+  @apply hover:bg-primary-light hover:shadow-soft;
+  @apply active:scale-[0.98];
+}
+
+.btn-secondary {
+  @apply bg-white text-primary px-6 py-3 rounded-2xl font-medium transition-all duration-200;
+  @apply border border-neutral-200;
+  @apply hover:bg-neutral-50 hover:shadow-soft;
+  @apply active:scale-[0.98];
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-2xl shadow-soft p-6;
+}
+
+/* Input styles */
+.input {
+  @apply w-full px-4 py-3 rounded-xl border border-neutral-200;
+  @apply focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary;
+  @apply transition-all duration-200;
+}

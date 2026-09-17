@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+
+# Build outputs
+dist/
+build/
+
+# Session data (optional - comment out to include)
+# backend/sessions/
+
+# Session and runtime data (regenerated locally)
+backend/sessions/
+backend/temp_pdf_images/
+.VSCodeCounter/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files (can be included for demo)
+# *.mp4
+# *.pptx

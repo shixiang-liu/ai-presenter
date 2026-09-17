@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- AI Presenter Logo - Abstract speaker silhouette with sound waves -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A"/>
+      <stop offset="100%" style="stop-color:#1E293B"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Speaker silhouette -->
+  <circle cx="35" cy="30" r="12" fill="url(#grad)"/>
+  <path d="M20 50 C20 42, 50 42, 50 50 L50 70 C50 75, 20 75, 20 70 Z" fill="url(#grad)"/>
+  
+  <!-- Sound waves -->
+  <path d="M60 25 Q70 30 60 35" stroke="#0F172A" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M65 18 Q80 30 65 42" stroke="#0F172A" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <path d="M70 10 Q90 30 70 50" stroke="#0F172A" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.4"/>
+  
+  <!-- Accent line -->
+  <rect x="20" y="80" width="60" height="3" rx="1.5" fill="#10B981"/>
+</svg>
